@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Fontawesome/css/all.min.css">
+  <title>網頁模仿</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", "Noto", "微軟正黑體";
+    }
+
+    body {
+      position: relative;
+    }
+
+    .topBar {
+      position: fixed;
+      width: 100%;
+      height: 60px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      /* float: left; */
+    }
+
+    .threeLine {
+      height: 20px;
+      width: 20px;
+      margin: 20px 10px 20px 25px;
+    }
+
+    .logo {
+      height: 23px;
+      margin: 18px 4px;
+      padding: 1px;
+    }
+
+    .search {
+      display: inline-block;
+      position: absolute;
+      margin: 10px auto;
+      left: 0;
+      right: 0;
+      width: 510px;
+      /* width: 635px; */
+      height: 38px;
+      border: 1px solid #d3d3d3;
+      background-color: #ffffff;
+      box-shadow: inset 0 0 2px 1px rgb(0 0 0 / 6%);
+    }
+
+    input {
+      /* position: absolute; */
+      display: inline-block;
+      border: 0px;
+      width: 438px;
+      height: 100%;
+      padding-left: 10px;
+      font-size: 16px;
+    }
+
+    input:focus {
+      outline: 1px solid #333;
+    }
+
+    .search2 {
+      position: absolute;
+      height: 100%;
+      width: 60px;
+      top: 0;
+      right: 0;
+      border-left: 1px solid #d3d3d3;
+      background-color: #f8f8f8;
+    }
+
+    .search2 img {
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .mic {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #f9f9f9;
+      border-radius: 50%;
+      right: -50px;
+      top: -1px;
+    }
+
+    .mic img {
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .nineblock {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      margin: 21px;
+      top: -4px;
+      right: 130px;
+    }
+
+    .threePoint {
+      position: absolute;
+      margin: 22px;
+      top: 0;
+      right: 90px;
+
+    }
+
+    .logIn {
+      position: absolute;
+      width: 80px;
+      height: 40px;
+      border: 1px solid #065fd4;
+      border-radius: 2px;
+      margin: 10px 15px;
+      top: 0;
+      right: 0;
+      padding: 11px;
+      font-size: 12px;
+      text-align: right;
+      box-sizing: border-box;
+      color: #065fd4;
+    }
+
+    .logIn img {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 50%;
+      left: 15%;
+      transform: translate(0%, -50%);
+      filter: hue-rotate(45deg);
+    }
+
+
+    .leftMenu {
+      position: fixed;
+      display: inline-block;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      width: 240px;
+      height: 100%;
+      background-color: #ffffff;
+      /* border: 1px solid #333; */
+      top: 0;
+      left: 0;
+    }
+
+    .leftMenu:hover {
+      overflow-y: auto;
+    }
+
+    .up {
+      position: fixed;
+      height: 70px;
+      width: 225px;
+      margin: 0px;
+      background-color: #ffffff;
+      z-index: +1;
+    }
+
+    .up .logo {
+      margin-left: 25px;
+    }
+
+    .l-block {
+      position: relative;
+      box-sizing: border-box;
+      width: 225px;
+      height: 45px;
+      padding-top: 0;
+      /* border: 1px solid black; */
+      line-height: -100px;
+    }
+
+    .bg-g {
+      margin-top: 70px;
+      background-color: #e5e5e5;
+    }
+
+    .l-block:hover {
+      background: #f2f2f2;
+    }
+
+    .l-logo {
+      width: 20px;
+      height: 20px;
+      padding: 15px;
+      margin: 0 10px;
+      /* border: 1px solid #333; */
+    }
+
+    .l-block p {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(0, -50%);
+    }
+
+    .l-line {
+      position: relative;
+      width: 225px;
+      height: 1px;
+      margin: 13px;
+      margin-left: 0;
+      background: #e5e5e5;
+    }
+
+    .l-login {
+      position: relative;
+      box-sizing: border-box;
+      padding: 5px 21px;
+    }
+
+    .l-login p {
+      font-size: 0.9rem;
+    }
+
+    .new-log {
+      position: relative;
+      margin: 15px 0px;
+      width: 100px;
+      font-size: 16px;
+      padding: 9px;
+    }
+
+    .l-title {
+      width: 225px;
+      margin: 20px;
+      font-weight: bold;
+      color: #696969;
+    }
+
+    .l-logo-2 {
+      width: 25px;
+      height: 25px;
+      padding: 11px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .textD {
+      font-size: 13px;
+      padding: 5px;
+      color: #606060;
+      width: 180px;
+      margin: 0 20px;
+    }
+
+
+
+    .topTwo {
+      position: fixed;
+      width: 100%;
+      height: 56px;
+      background-color: #ffffff;
+      margin-top: 61px;
+      padding: 0px;
+      padding-left: 120px;
+      border-bottom: 1px solid #e5e5e5;
+      z-index: -1;
+      text-align: center;
+      overflow: hidden;
+    }
+
+
+    .twoWord {
+      display: inline-block;
+      padding: 5px 15px;
+      margin: 12px 4px;
+      background: #f2f2f2;
+      border: 1px solid #dcdcdc;
+      border-radius: 16px;
+      color: #030303;
+      font-size: 14px;
+    }
+
+    .bk-bgc {
+      background-color: #030303;
+      color: white;
+    }
+
+    .twoWord:hover {
+      background: #e5e5e5;
+    }
+
+    .bk-bgc:hover {
+      background-color: #030303;
+    }
+
+
+
+    .rightBlock {
+      position: absolute;
+      box-sizing: border-box;
+      left: 240px;
+      right: 0;
+      top: 118px;
+      margin: auto;
+      width: 100%-240px;
+      /* border: 5px solid teal; */
+      z-index: -2;
+      background-color: #f9f9f9;
+      overflow: hidden;
+    }
+
+    .ad {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      background-color: black;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .ad img {
+      width: 320px;
+      height: 24px;
+      margin: 35px 0 8px 30px;
+    }
+
+    .ad p {
+      margin: 0px 0 10px 30px;
+      font-size: 26px;
+    }
+
+    .subscribe {
+      position: absolute;
+      left: 30px;
+      bottom: 35px;
+      font-size: 1rem;
+      padding: .6rem 1rem;
+      border: 2px solid #fff;
+      border-radius: 2px;
+    }
+
+    .leave {
+      position: absolute;
+      box-sizing: border-box;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      right: 0;
+      padding: 3px;
+      margin: .8rem;
+      text-align: center;
+      line-height: 17px;
+      font-size: 20px;
+      background-color: #b4b4b4;
+      color: #242424;
+    }
+
+    .warp {
+      position: relative;
+      width: 1200px;
+      /* background-color: red; */
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .col {
+      width: 280px;
+      float: left;
+      margin: 25px 10px 10px 10px;
+    }
+
+    .picture {
+      position: relative;
+      width: 100%;
+      margin-bottom: .5rem;
+    }
+
+    .photo1 {
+      width: 100%;
+    }
+
+    .box {
+      width: 14%;
+      border-radius: 50%;
+      float: left;
+      margin-right: .5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .picture span {
+      position: absolute;
+      right: 4px;
+      bottom: 8px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 2px 4px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 3px;
+      color: white;
+    }
+
+    .col h2 {
+      font-size: 1rem;
+      height: 2.6rem;
+      overflow: hidden;
+      color: #030303;
+      /* text-overflow: ellipsis; */
+      margin-bottom: .5rem;
+    }
+
+    .col p {
+      font-size: .8rem;
+      line-height: 1.2rem;
+      color: #606060;
+    }
+
+    .Bline {
+      display: inline-block;
+      width: 1180px;
+      text-align: center;
+      background-color: #d6d6d6;
+      height: 3px;
+      margin: 40px 10px;
+      margin-bottom: 0px;
+    }
+
+    .Rtitle {
+      font-size: 1.4rem;
+      color: #030303;
+      margin: 25px 20px;
+      margin-bottom: 0px;
+    }
+
+    .incon-explore {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-illustrate {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-home {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .incon-subscription {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-caret {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-clock {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-comment {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-check {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-setting {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-browse {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+    }
+
+    .icon-logIn {
+      position: absolute;
+      top: 21%;
+      left: 13%;
+    }
+
+    .icon-logIn-2 {
+      position: absolute;
+      top: 12%;
+      left: 12%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topBar">
+    <img class="threeLine" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="瀏覽">
+    <img class="logo" src="https://www.marks-iplaw.jp/wp-content/uploads/2018/08/yt_logo_rgb_light.png" alt="yt-icon">
+    <div class="search">
+      <input type="text" placeholder="搜尋">
+      <div class="search2">
+        <img src="https://cdn-icons-png.flaticon.com/512/482/482631.png" alt="">
+      </div>
+      <div class="mic">
+        <img src="https://cdn-icons-png.flaticon.com/512/1082/1082861.png" alt="">
+      </div>
+    </div>
+    <i class="nineblock fab fa-buromobelexperte fa-2x"></i>
+    <i class="threePoint fas fa-ellipsis-v"></i>
+    <div class="logIn">
+      <i class="icon-logIn far fa-user-circle fa-2x"></i>
+      登入
+    </div>
+  </div>
+
+
+
+  <div class="leftMenu">
+    <div class="up">
+      <img class="threeLine" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="瀏覽">
+      <img class="logo" src="https://logodownload.org/wp-content/uploads/2014/10/youtube-logo-9.png" alt="yt-icon">
+    </div>
+    <div class="l-block bg-g">
+      <i class="icon-home fas fa-home"></i>
+      <p>首頁</p>
+    </div>
+    <div class="l-block">
+      <i class="incon-explore fas fa-angle-double-right"></i>
+      <p>探索</p>
+    </div>
+    <div class="l-block">
+      <i class="incon-subscription fas fa-star-half-alt"></i>
+      <p>訂閱內容</p>
+    </div>
+    <div class="l-line"></div>
+    <div class="l-block">
+      <i class="icon-caret fas fa-caret-square-right"></i>
+      <p>媒體庫</p>
+    </div>
+    <div class="l-block">
+      <i class="icon-clock far fa-clock"></i>
+      <p>觀看紀錄</p>
+    </div>
+    <div class="l-line"></div>
+    <div class="l-login">
+      <p>登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</p>
+      <div class="logIn new-log">
+        <i class="icon-logIn-2 far fa-user-circle fa-2x"></i>
+        登入
+      </div>
+    </div>
+    <div class="l-line"></div>
+    <p class="l-title">YOUTUBE 精選</p>
+    <div class="l-block">
+      <img class="l-logo-2"
+        src="https://yt3.ggpht.com/rHkv53vCSGrO6wIiiDmaCeQRDdWYsTb0ayT1tLQLReLXc-i6LV62oD9rjSH9v9hzgw7TTgnSIw=s88-c-k-c0x00ffffff-no-rj"
+        alt="">
+      <p>音樂</p>
+    </div>
+    <div class="l-block">
+      <img class="l-logo-2"
+        src="https://yt3.ggpht.com/YCbClrKyd0cdKhbGJq2nsOzmXax7PNJSfAxB3w1o2nPboPNX6jV-QdX-vprgr55XaeYIp2T85Pc=s88-c-k-c0x00ffffff-no-rj"
+        alt="">
+      <p>體育</p>
+    </div>
+    <div class="l-block">
+      <img class="l-logo-2"
+        src="https://yt3.ggpht.com/K7Sguji_hLkTqEbusSCnTXjL11iniarxamzU1CsohCcxdEkkNLU0GyARem6gHdodlhv5pGHE6vg=s88-c-k-c0x00ffffff-no-rj"
+        alt="">
+      <p>遊戲</p>
+    </div>
+    <div class="l-block">
+      <img class="l-logo-2"
+        src="https://yt3.ggpht.com/6lo97rUTO7xhIBXZqLiaW2kA_eMBIEmqc27EqlKLyE4nAY-yzcKBG0Hs0YdUka3gJ629HcwgyzQ=s88-c-k-c0x00ffffff-no-rj"
+        alt="">
+      <p>電影</p>
+    </div>
+    <div class="l-block">
+      <img class="l-logo-2"
+        src="https://yt3.ggpht.com/xY-iZkAGrcD6-pO6g1GSIGemh0U1lr2ZuZDj6t87YExIP6G0lUWOgIEJ6NyJuAy7lefGLgCGwg=s88-c-k-c0x00ffffff-no-rj"
+        alt="">
+      <p>新聞</p>
+    </div>
+    <div class="l-block">
+      <img class="l-logo-2"
+        src="https://yt3.ggpht.com/8D6JlsnvwDZFMdcbjqVji82kggP3aXXbO-yBD0RFrKlp4G1zNt9wcqcVTSPnAI8GuUAbDYQwsg=s88-c-k-c0x00ffffff-no-rj"
+        alt="">
+      <p>直播</p>
+    </div>
+    <div class="l-block">
+      <img class="l-logo-2"
+        src="https://yt3.ggpht.com/x9IIP-f9MqbSOg00s0dnqhNJTNW3zw5IJdMjn0_8qmgNs2pdI12PZf-WRKQSu4uKTTIEsb_hsg=s88-c-k-c0x00ffffff-no-rj"
+        alt="">
+      <p>360 度影片</p>
+    </div>
+    <div class="l-line"></div>
+    <div class="l-block">
+      <i class="icon-browse fas fa-tasks"></i>
+      <p>瀏覽頻道</p>
+    </div>
+    <div class="l-line"></div>
+    <p class="l-title">更多 YOUTUBE 功能</p>
+    <div class="l-block">
+      <img class="l-logo" src="https://cdn-icons-png.flaticon.com/512/1384/1384086.png" alt="">
+      <p>YouYube Premium</p>
+    </div>
+    <div class="l-block">
+      <img class="l-logo" src="https://cdn-icons-png.flaticon.com/512/4029/4029010.png" alt="">
+      <p>直播</p>
+    </div>
+    <div class="l-line"></div>
+    <div class="l-block">
+      <i class="icon-setting fas fa-cog"></i>
+      <p>設定</p>
+    </div>
+    <div class="l-block">
+      <i class="icon-check far fa-calendar-check"></i>
+      <p>檢舉紀錄</p>
+    </div>
+    <div class="l-block">
+      <i class="icon-illustrate fas fa-exclamation-circle fa-1g"></i>
+      <p>說明</p>
+    </div>
+    <div class="l-block">
+      <i class="icon-comment fas fa-comment-dots"></i>
+      <p>提供意見</p>
+    </div>
+    <div class="l-line"></div>
+    <p class="textD">簡介 媒體 版權 與我們聯絡<br>創作者 廣告 開發人員</p>
+    <p class="textD">條款 隱私權 政策與安全性<br>YouTube運作方式 測試新功能</p>
+  </div>
+
+
+
+
+  <div class="topTwo">
+    <div class="twoWord bk-bgc">全部</div>
+    <div class="twoWord">音樂</div>
+    <div class="twoWord">動畫</div>
+    <div class="twoWord">直播中</div>
+    <div class="twoWord">烹飪節目</div>
+    <div class="twoWord">觀光</div>
+    <div class="twoWord">ASMR</div>
+    <div class="twoWord">手工藝</div>
+    <div class="twoWord">寵物</div>
+    <div class="twoWord">動作冒險遊戲</div>
+    <div class="twoWord">最新上傳</div>
+  </div>
+
+
+
+
+  <div class="rightBlock">
+    <div class="ad">
+      <img
+        src="https://www.gstatic.com/youtube/img/promos/growth/1263f05576c9f137587330f92e03e0a725f426fd9d40d28a8942692dc8f6b210_640x48.png"
+        alt="">
+      <p>探索專屬你獨特風格的音樂</p>
+      <div class="subscribe">立即訂閱</div>
+      <div class="leave">X</div>
+    </div>
+
+
+
+    <div class="warp">
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/Uv0j3YsQLpA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBPu6tiWBBTOdknpLnm84LL1lf5tA">
+          <span>5:51</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLQ1Y9zY7ZRfJKwnFDv-5EEJ375VgBTBree8YcJtvA=s88-c-k-c0x00ffffff-no-rj"
+          alt="">
+        <div class="title">
+          <h2>傳統但極為有用直接的取水方式，就是鋸走一的大冰塊帶回家當水源【阿拉斯加新世代】</h2>
+        </div>
+        <p>國家地理 National Geographic TW <br>觀看次數：5772次．一天前</p>
+      </div>
+
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/7vjeMvnmxVY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAo51aD0EHSqDDcOQykR91p9FyXow">
+          <span>11:45</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLR2W5VRz8Zcd2aDZPVJvjo_qkJB_J9GsEAluksI=s88-c-k-c0x00ffffff-no-rj" alt="">
+        <h2>為何運動員左撇子特別多？硬改慣用手會出問題嗎？《 七七科學探索 》EP 020｜志祺七七</h2>
+        <p>志祺七七 X 圖文不符<br>觀看次數：8.2萬次．20小時前</p>
+      </div>
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/dP-YVw--VH8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbdLEhHsUFSoFgHIsCzlXWrUhTvw">
+          <span>13:21</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLREcZAI67sYE-_5ZLk7nFwHMqsNhntpBwUnPZlUfw=s88-c-k-c0x00ffffff-no-rj"
+          alt="">
+        <h2>Easiest Pepper Steak Recipe | Almazan Kitchen</h2>
+        <p>AlmazanKitchen<br>觀看次數：4.7萬次．2天前</p>
+      </div>
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/KSMDDmW8SH8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6I6t0xKa_bUU69dIC4v2W-USiPA">
+          <span>4:24</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLSGuhPyoz_ep3wuedbtqspZav-X8Uu5CEqlbUplwg=s88-c-k-c0x00ffffff-no-rj"
+          alt="">
+        <h2>The Desolate Cabin - Two Nights in the Wild Woods</h2>
+        <p>Erik Normark<br>觀看次數：1.6萬次．2天前</p>
+      </div>
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/dNTcxeMaSsw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9EAIjUFcMEHhLbS6Kv10LFN8JOA">
+          <span>27:55</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLRCCm-9q7_VE1dxqLbtHLdG4zExnr2uYGas_um0Mg=s88-c-k-c0x00ffffff-no-rj">
+        <h2>これだけは覚えてほしい、恐らく世界一舞茸を美味しく食べる方法です。</h2>
+        <p>料理研究家リュウジのバズレシピ<br>觀看次數：19萬次．2天前</p>
+      </div>
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/TwpDNULQDtU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxXFbKjUJvYlXzAe-1x8mexX3K5g">
+          <span>1:23</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLQ1Y9zY7ZRfJKwnFDv-5EEJ375VgBTBree8YcJtvA=s88-c-k-c0x00ffffff-no-rj">
+        <h2>成年座頭鯨體長可達16公尺 ，一天即吃下超過2千公斤食物，珊瑚礁海域是牠們交配生產最愛停留的地方【大堡礁海底奇觀】</h2>
+        <p>國家地理 National Geographic TW<br>觀看次數：3.3萬次．1週前</p>
+      </div>
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/MTY1Kje0yLg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBewbWntgn6W5XFFYVSZmvM5oes4w">
+          <span>4:30</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLRVaFUN5bsqFRf79dvLnLqVw3QA03W4UlU8smPS=s68-c-k-c0x00ffffff-no-rj">
+        <h2>Gravity Visualized</h2>
+        <p>apbiolghs<br>觀看次數：8733萬次．9年前</p>
+      </div>
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/P7YJbeuaTXQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCqOO0kVWbLqyciyftASXJd-lrFw"
+            alt="">
+          <span>20:49</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/U6n1tM-bMbzyjnW3kIrs3Xdhcyxwri__7Ftm_lYuYBvPB1BRU-Z93Zvefc8TPzMUgJly4BKk=s88-c-k-c0x00ffffff-no-rj"
+          alt="">
+        <h2>你注定要看這個影片，拉普拉斯的惡魔，一個可以預知未來回溯歷史的全知全能的神 | 老高與小茉 Mr & Mrs Gao</h2>
+        <p>老高與小茉 Mr & Mrs Gao<br>觀看次數：206萬次．3天前</p>
+      </div>
+
+
+
+      <div class="Bline"></div>
+      <div class="Rtitle">發燒影片</div>
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/g8NVwN0_mks/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC7DCmuvMrmFWhSNwPM6PsnWEZBJg"
+            alt="">
+          <span>3:59</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLRezF8iiSIfaq8kZHAwryuYGUJU18DbwZxSFwmz9Q=s88-c-k-c0x00ffffff-no-rj"
+          alt="">
+        <h2>Disney RELAXING PIANO Collection -Sleep Music, Study Music, Calm Music (Piano Covered by kno)</h2>
+        <p>kno Piano Music<br>觀看次數：4103萬次．3年前</p>
+      </div>
+
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/3jWRrafhO7M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALkX_ZzLu0raKaK_Ro54YOYoaqCQ"
+            alt="">
+          <span>32:04</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLTGFvRaz8sjeqI0D3bukwoHgibpgOrMnvAOgMzEGA=s88-c-k-c0x00ffffff-no-rj-mo"
+          alt="">
+        <h2>Relaxing Jazz & Bossa Nova Music - Studio Ghibli Cover</h2>
+        <p>Cafe Music BGM channel<br>觀看次數：3076萬次．5年前</p>
+      </div>
+
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/bhxhNIQBKJI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1aR6ZcrM3xrHaDwrfx8oYzt1iAA"
+            alt="">
+          <span>4:09</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/HpgsAI938WXah_pye_SC8Qmo_hN_ubzncqiEMUPqwUXAFYXNXEJYs3VbbxWgNPvVtlFqL5o-CfM=s88-c-k-c0x00ffffff-no-rj"
+          alt="">
+        <h2>Troye Sivan - Dance To This ft. Ariana Grande (Official Video) ft. Ariana Grande</h2>
+        <p>Troye Sivan<br>觀看次數：1.9億次．3年前</p>
+      </div>
+
+      <div class="col">
+        <div class="picture">
+          <img class="photo1"
+            src="https://i.ytimg.com/vi/P73REgj-3UE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCw7PKwXGxW5eg6xZlpcSyWv6HzxQ"
+            alt="">
+          <span>14:49</span>
+        </div>
+        <img class="box"
+          src="https://yt3.ggpht.com/ytc/AKedOLRbNkNre-fS61xf8Lw-5EougDlBKvIEPp_2wjzz=s88-c-k-c0x00ffffff-no-rj" alt="">
+        <h2>Primitive Technology: Tiled Roof Hut</h2>
+        <p>Primitive Technology<br>觀看次數：8425萬次．6年前</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
