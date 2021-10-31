@@ -77,6 +77,11 @@
       background-color: #f8f8f8;
     }
 
+    .search2:hover {
+      background-color: #e5e5e5;
+
+    }
+
     .search2 img {
       position: absolute;
       height: 18px;
@@ -107,11 +112,12 @@
 
     .nineblock {
       position: absolute;
-      width: 18px;
-      height: 18px;
+      width: 21px;
+      height: 21px;
       margin: 21px;
-      top: -4px;
-      right: 130px;
+      top: -2px;
+      right: 120px;
+      z-index: 200000;
     }
 
     .threePoint {
@@ -145,7 +151,7 @@
       top: 50%;
       left: 15%;
       transform: translate(0%, -50%);
-      filter: hue-rotate(45deg);
+      filter: hue-rotate(5deg);
     }
 
 
@@ -314,7 +320,7 @@
       right: 0;
       top: 118px;
       margin: auto;
-      width: 100%-240px;
+      width: calc(100% - 240px);
       /* border: 5px solid teal; */
       z-index: -2;
       background-color: #f9f9f9;
@@ -369,16 +375,16 @@
 
     .warp {
       position: relative;
-      width: 1200px;
+      width: 95%;
       /* background-color: red; */
       margin: auto;
       overflow: hidden;
     }
 
     .col {
-      width: 280px;
       float: left;
-      margin: 25px 10px 10px 10px;
+      width: 24%;
+      margin: 25px .5% 10px .5%;
     }
 
     .picture {
@@ -423,16 +429,18 @@
     .col p {
       font-size: .8rem;
       line-height: 1.2rem;
+      height: 1.2rem;
+      overflow: hidden;
       color: #606060;
     }
 
     .Bline {
       display: inline-block;
-      width: 1180px;
+      width: 100%;
       text-align: center;
       background-color: #d6d6d6;
       height: 3px;
-      margin: 40px 10px;
+      margin: 40px auto;
       margin-bottom: 0px;
     }
 
@@ -511,6 +519,9 @@
 
     .icon-logIn-2 {
       position: absolute;
+      filter: hue-rotate(90deg);
+      width: 23px;
+      height: 23px;
       top: 12%;
       left: 12%;
     }
@@ -530,7 +541,8 @@
         <img src="https://cdn-icons-png.flaticon.com/512/1082/1082861.png" alt="">
       </div>
     </div>
-    <i class="nineblock fab fa-buromobelexperte fa-2x"></i>
+    <!-- <i class="nineblock fab fa-buromobelexperte fa-2x"></i> -->
+    <img class="nineblock" src="./images/grid.png" alt="">
     <i class="threePoint fas fa-ellipsis-v"></i>
     <div class="logIn">
       <i class="icon-logIn far fa-user-circle fa-2x"></i>
@@ -570,52 +582,38 @@
     <div class="l-login">
       <p>登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</p>
       <div class="logIn new-log">
-        <i class="icon-logIn-2 far fa-user-circle fa-2x"></i>
+        <img class="icon-logIn-2" src="./images/USER.png" alt="">
         登入
       </div>
     </div>
     <div class="l-line"></div>
     <p class="l-title">YOUTUBE 精選</p>
     <div class="l-block">
-      <img class="l-logo-2"
-        src="https://yt3.ggpht.com/rHkv53vCSGrO6wIiiDmaCeQRDdWYsTb0ayT1tLQLReLXc-i6LV62oD9rjSH9v9hzgw7TTgnSIw=s88-c-k-c0x00ffffff-no-rj"
-        alt="">
+      <img class="l-logo-2" src="./images/channels4_profile.jpg" alt="">
       <p>音樂</p>
     </div>
     <div class="l-block">
-      <img class="l-logo-2"
-        src="https://yt3.ggpht.com/YCbClrKyd0cdKhbGJq2nsOzmXax7PNJSfAxB3w1o2nPboPNX6jV-QdX-vprgr55XaeYIp2T85Pc=s88-c-k-c0x00ffffff-no-rj"
-        alt="">
+      <img class="l-logo-2" src="./images/channels4_profile (1).jpg" alt="">
       <p>體育</p>
     </div>
     <div class="l-block">
-      <img class="l-logo-2"
-        src="https://yt3.ggpht.com/K7Sguji_hLkTqEbusSCnTXjL11iniarxamzU1CsohCcxdEkkNLU0GyARem6gHdodlhv5pGHE6vg=s88-c-k-c0x00ffffff-no-rj"
-        alt="">
+      <img class="l-logo-2" src="./images/channels4_profile (2).jpg" alt="">
       <p>遊戲</p>
     </div>
     <div class="l-block">
-      <img class="l-logo-2"
-        src="https://yt3.ggpht.com/6lo97rUTO7xhIBXZqLiaW2kA_eMBIEmqc27EqlKLyE4nAY-yzcKBG0Hs0YdUka3gJ629HcwgyzQ=s88-c-k-c0x00ffffff-no-rj"
-        alt="">
+      <img class="l-logo-2" src="./images/channels4_profile (3).jpg" alt="">
       <p>電影</p>
     </div>
     <div class="l-block">
-      <img class="l-logo-2"
-        src="https://yt3.ggpht.com/xY-iZkAGrcD6-pO6g1GSIGemh0U1lr2ZuZDj6t87YExIP6G0lUWOgIEJ6NyJuAy7lefGLgCGwg=s88-c-k-c0x00ffffff-no-rj"
-        alt="">
+      <img class="l-logo-2" src="./images/channels4_profile (4).jpg" alt="">
       <p>新聞</p>
     </div>
     <div class="l-block">
-      <img class="l-logo-2"
-        src="https://yt3.ggpht.com/8D6JlsnvwDZFMdcbjqVji82kggP3aXXbO-yBD0RFrKlp4G1zNt9wcqcVTSPnAI8GuUAbDYQwsg=s88-c-k-c0x00ffffff-no-rj"
-        alt="">
+      <img class="l-logo-2" src="./images/channels4_profile (5).jpg" alt="">
       <p>直播</p>
     </div>
     <div class="l-block">
-      <img class="l-logo-2"
-        src="https://yt3.ggpht.com/x9IIP-f9MqbSOg00s0dnqhNJTNW3zw5IJdMjn0_8qmgNs2pdI12PZf-WRKQSu4uKTTIEsb_hsg=s88-c-k-c0x00ffffff-no-rj"
-        alt="">
+      <img class="l-logo-2" src="./images/channels4_profile (6).jpg" alt="">
       <p>360 度影片</p>
     </div>
     <div class="l-line"></div>
@@ -700,7 +698,8 @@
         <div class="title">
           <h2>傳統但極為有用直接的取水方式，就是鋸走一的大冰塊帶回家當水源【阿拉斯加新世代】</h2>
         </div>
-        <p>國家地理 National Geographic TW <br>觀看次數：5772次．一天前</p>
+        <p>國家地理 National Geographic TW</p>
+        <p>觀看次數：5772次．一天前</p>
       </div>
 
       <div class="col">
@@ -712,7 +711,8 @@
         <img class="box"
           src="https://yt3.ggpht.com/ytc/AKedOLR2W5VRz8Zcd2aDZPVJvjo_qkJB_J9GsEAluksI=s88-c-k-c0x00ffffff-no-rj" alt="">
         <h2>為何運動員左撇子特別多？硬改慣用手會出問題嗎？《 七七科學探索 》EP 020｜志祺七七</h2>
-        <p>志祺七七 X 圖文不符<br>觀看次數：8.2萬次．20小時前</p>
+        <p>志祺七七 X 圖文不符</p>
+        <p>觀看次數：8.2萬次．20小時前</p>
       </div>
       <div class="col">
         <div class="picture">
@@ -724,7 +724,8 @@
           src="https://yt3.ggpht.com/ytc/AKedOLREcZAI67sYE-_5ZLk7nFwHMqsNhntpBwUnPZlUfw=s88-c-k-c0x00ffffff-no-rj"
           alt="">
         <h2>Easiest Pepper Steak Recipe | Almazan Kitchen</h2>
-        <p>AlmazanKitchen<br>觀看次數：4.7萬次．2天前</p>
+        <p>AlmazanKitchen</p>
+        <p>觀看次數：4.7萬次．2天前</p>
       </div>
       <div class="col">
         <div class="picture">
@@ -736,7 +737,8 @@
           src="https://yt3.ggpht.com/ytc/AKedOLSGuhPyoz_ep3wuedbtqspZav-X8Uu5CEqlbUplwg=s88-c-k-c0x00ffffff-no-rj"
           alt="">
         <h2>The Desolate Cabin - Two Nights in the Wild Woods</h2>
-        <p>Erik Normark<br>觀看次數：1.6萬次．2天前</p>
+        <p>Erik Normark</p>
+        <p>觀看次數：1.6萬次．2天前</p>
       </div>
       <div class="col">
         <div class="picture">
@@ -747,7 +749,8 @@
         <img class="box"
           src="https://yt3.ggpht.com/ytc/AKedOLRCCm-9q7_VE1dxqLbtHLdG4zExnr2uYGas_um0Mg=s88-c-k-c0x00ffffff-no-rj">
         <h2>これだけは覚えてほしい、恐らく世界一舞茸を美味しく食べる方法です。</h2>
-        <p>料理研究家リュウジのバズレシピ<br>觀看次數：19萬次．2天前</p>
+        <p>料理研究家リュウジのバズレシピ</p>
+        <p>觀看次數：19萬次．2天前</p>
       </div>
       <div class="col">
         <div class="picture">
@@ -757,8 +760,9 @@
         </div>
         <img class="box"
           src="https://yt3.ggpht.com/ytc/AKedOLQ1Y9zY7ZRfJKwnFDv-5EEJ375VgBTBree8YcJtvA=s88-c-k-c0x00ffffff-no-rj">
-        <h2>成年座頭鯨體長可達16公尺 ，一天即吃下超過2千公斤食物，珊瑚礁海域是牠們交配生產最愛停留的地方【大堡礁海底奇觀】</h2>
-        <p>國家地理 National Geographic TW<br>觀看次數：3.3萬次．1週前</p>
+        <h2>成年座頭鯨體長可達16公尺 ，一天即吃下超過2千公斤食物【大堡礁海底奇觀】</h2>
+        <p>國家地理 National Geographic TW</p>
+        <p>觀看次數：3.3萬次．1週前</p>
       </div>
       <div class="col">
         <div class="picture">
@@ -769,7 +773,8 @@
         <img class="box"
           src="https://yt3.ggpht.com/ytc/AKedOLRVaFUN5bsqFRf79dvLnLqVw3QA03W4UlU8smPS=s68-c-k-c0x00ffffff-no-rj">
         <h2>Gravity Visualized</h2>
-        <p>apbiolghs<br>觀看次數：8733萬次．9年前</p>
+        <p>apbiolghs</p>
+        <p>觀看次數：8733萬次．9年前</p>
       </div>
       <div class="col">
         <div class="picture">
@@ -782,7 +787,8 @@
           src="https://yt3.ggpht.com/U6n1tM-bMbzyjnW3kIrs3Xdhcyxwri__7Ftm_lYuYBvPB1BRU-Z93Zvefc8TPzMUgJly4BKk=s88-c-k-c0x00ffffff-no-rj"
           alt="">
         <h2>你注定要看這個影片，拉普拉斯的惡魔，一個可以預知未來回溯歷史的全知全能的神 | 老高與小茉 Mr & Mrs Gao</h2>
-        <p>老高與小茉 Mr & Mrs Gao<br>觀看次數：206萬次．3天前</p>
+        <p>老高與小茉 Mr & Mrs Gao</p>
+        <p>觀看次數：206萬次．3天前</p>
       </div>
 
 
@@ -800,7 +806,8 @@
           src="https://yt3.ggpht.com/ytc/AKedOLRezF8iiSIfaq8kZHAwryuYGUJU18DbwZxSFwmz9Q=s88-c-k-c0x00ffffff-no-rj"
           alt="">
         <h2>Disney RELAXING PIANO Collection -Sleep Music, Study Music, Calm Music (Piano Covered by kno)</h2>
-        <p>kno Piano Music<br>觀看次數：4103萬次．3年前</p>
+        <p>kno Piano Music</p>
+        <p>觀看次數：4103萬次．3年前</p>
       </div>
 
       <div class="col">
@@ -814,7 +821,8 @@
           src="https://yt3.ggpht.com/ytc/AKedOLTGFvRaz8sjeqI0D3bukwoHgibpgOrMnvAOgMzEGA=s88-c-k-c0x00ffffff-no-rj-mo"
           alt="">
         <h2>Relaxing Jazz & Bossa Nova Music - Studio Ghibli Cover</h2>
-        <p>Cafe Music BGM channel<br>觀看次數：3076萬次．5年前</p>
+        <p>Cafe Music BGM channel</p>
+        <p>觀看次數：3076萬次．5年前</p>
       </div>
 
       <div class="col">
@@ -828,7 +836,8 @@
           src="https://yt3.ggpht.com/HpgsAI938WXah_pye_SC8Qmo_hN_ubzncqiEMUPqwUXAFYXNXEJYs3VbbxWgNPvVtlFqL5o-CfM=s88-c-k-c0x00ffffff-no-rj"
           alt="">
         <h2>Troye Sivan - Dance To This ft. Ariana Grande (Official Video) ft. Ariana Grande</h2>
-        <p>Troye Sivan<br>觀看次數：1.9億次．3年前</p>
+        <p>Troye Sivan</p>
+        <p>觀看次數：1.9億次．3年前</p>
       </div>
 
       <div class="col">
@@ -841,7 +850,8 @@
         <img class="box"
           src="https://yt3.ggpht.com/ytc/AKedOLRbNkNre-fS61xf8Lw-5EougDlBKvIEPp_2wjzz=s88-c-k-c0x00ffffff-no-rj" alt="">
         <h2>Primitive Technology: Tiled Roof Hut</h2>
-        <p>Primitive Technology<br>觀看次數：8425萬次．6年前</p>
+        <p>Primitive Technology</p>
+        <p>觀看次數：8425萬次．6年前</p>
       </div>
 
     </div>
